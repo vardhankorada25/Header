@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        .nav
+        {
+            display: flex;
+            flex-direction: ;
+            justify-content: space-between;
+            background-color: black;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .search-button
+        {
+            background-color: blue;
+            padding: 5px;
+            height: 30px;
+            border-radius: 7px;
+        }
+        #toggle, label
+        {
+            display: none;
+        }
+        .list
+        {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .search-space
+        {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        @media (max-width:636px) 
+        {
+            .list{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                display:none;
+                padding: 10px;
+            }
+            label
+            {
+                display: flex;
+            }
+            #toggle:checked ~.list
+            {
+                display: flex;
+            }
+            .search input
+            {
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+          <a href="#">Logo</a>
+           <input type="checkbox" id="toggle">
+           <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+           <ul class="list">
+            <div class="search">
+                <input  type="search" placeholder="search" class="search-space">
+                <button class="search-button">
+                    Search
+                </button>
+            </div>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> About</a></li>
+            <li><a href="#"> Contact us</a></li>
+            <li><a href="#"> Sign up</a></li>
+           </ul>
+    </div>
+</body>
+</html>
